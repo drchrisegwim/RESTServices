@@ -16,10 +16,13 @@ namespace SampleEndPoint.Controllers
         }
 
         [HttpGet]
-        public string GetEmpDetails()
+        public IEnumerable<string> GetEmpDetails()
         {
-            return "Christian Egwim";
+            // return "Christian Egwim";
+           return  new string[] { "Christian Egwim", "Glory Benjamin", "Jesus Christ" };
         }
+
+       
 
         [HttpDelete]
         public string DeleteEmpDetails(string id)
